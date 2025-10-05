@@ -11,6 +11,7 @@ class _ButtonsExampleState extends State<ButtonsExample> {
   bool cvalue = true;
   bool? istoggled = true;
   String? radioop;
+  bool alertswitch = false;
   String? dropvalue;
   String? listdropvalue;
   List<String> countries = [
@@ -109,6 +110,29 @@ class _ButtonsExampleState extends State<ButtonsExample> {
               listdropvalue = value;
               setState(() {});
             },
+          ),
+
+          // switch inside a alert dialog
+          ElevatedButton(
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => StatefulBuilder(
+                  builder: (context, setState) => AlertDialog(
+                    content: Center(
+                      child: Switch(
+                        value: alertswitch,
+                        onChanged: (value) {
+                          alertswitch = value;
+                          setState(() {});
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+              );
+            },
+            child: Text("show alert dialog"),
           ),
         ],
       ),

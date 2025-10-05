@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_buttons/buttons_example.dart';
+import 'package:flutter_buttons/lottie_ex.dart';
+import 'package:flutter_buttons/mediaquery_sample.dart';
 
 
 void main() {
@@ -14,6 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-   home: ButtonsExample(), );
+   home: LottieExample(), );
   }
 }
