@@ -85,9 +85,9 @@ class _ButtonsExampleState extends State<ButtonsExample> {
             value: dropvalue,
             hint: Text("DropdownButton"),
             items: [
-              DropdownMenuItem(child: Text("one"), value: "1"),
-              DropdownMenuItem(child: Text("two"), value: "2"),
-              DropdownMenuItem(child: Text("three"), value: "3"),
+              DropdownMenuItem(value: "1", child: Text("one")),
+              DropdownMenuItem(value: "2", child: Text("two")),
+              DropdownMenuItem(value: "3", child: Text("three")),
             ],
             onChanged: (value) {
               dropvalue = value;
@@ -101,8 +101,8 @@ class _ButtonsExampleState extends State<ButtonsExample> {
             items: List.generate(
               countries.length,
               (index) => DropdownMenuItem(
-                child: Text(countries[index]),
                 value: countries[index],
+                child: Text(countries[index]),
               ),
             ),
             onChanged: (value) {
