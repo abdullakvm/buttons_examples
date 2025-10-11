@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_buttons/cache_image_example.dart';
-import 'package:flutter_buttons/lottie_ex.dart';
+import 'package:flutter_buttons/multi_image_picher.dart';
 import 'package:flutter_buttons/shared_priference_ex.dart';
 
 
@@ -16,6 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-   home: SharedPrefenceExample(), );
+   home: MultiImagePickerEx(), );
   }
 }
